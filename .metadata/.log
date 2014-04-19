@@ -14,3 +14,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2014-04-19 11:01:52.572
 !MESSAGE Failed to load properties file for project 'tmap_model_tool'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-04-19 11:46:32.329
+!MESSAGE Failed to load properties file for project 'tmap_library'
