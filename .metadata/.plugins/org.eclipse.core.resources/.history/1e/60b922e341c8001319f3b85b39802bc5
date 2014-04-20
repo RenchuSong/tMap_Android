@@ -1,0 +1,5 @@
+package com.tmap.library;
+
+public class SystemConfig {
+	public static final int MSG_WIFI_COMPLETE = 0x000001;	// WiFi scan complete
+}

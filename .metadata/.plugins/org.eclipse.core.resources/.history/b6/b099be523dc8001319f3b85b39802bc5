@@ -1,0 +1,5 @@
+package com.tmap.library.wifi;
+
+public class WifiScanner {
+
+}

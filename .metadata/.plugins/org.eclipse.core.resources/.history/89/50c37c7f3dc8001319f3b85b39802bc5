@@ -1,0 +1,51 @@
+package com.tmap.library.wifi;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.IntentFilter;
+import android.net.wifi.ScanResult;
+import android.net.wifi.WifiManager;
+
+public class WifiScanner {
+	private Map<String, Float> scanResult = null;	// BSSID-RSSI pair list
+	
+	public WifiScanner() {
+		// Resigter receiver to guarantee scan results being used after finishing scan
+		IntentFilter itFilter = new IntentFilter();
+		itFilter.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
+		registerReceiver(new BroadcastReceiver() {
+			@Override
+			public void onReceiver(Context c, Intent i){
+				WifiManager w = (WifiManager) c.getSystemService(Context.WIFI_SERVICE);
+				List<ScanResult> scanResults=w.getScanResults();
+						
+				scanResult = new HashMap<String, Float>();
+				
+				for (ScanResult scanItem : scanResults) {
+					scanResult.put(scanItem.BSSID, (float)scanItem.level);			   
+				}
+//						
+//						scanSet.add(scanResultList);
+//						if (scanCounter > 0) {
+//							scanCounter--;
+//							Log.v("dataing2", "" + scanCounter);
+//							wm.startScan();
+//						} else {
+//							try {
+//								Thread.sleep(2000);
+//							} catch (InterruptedException e) {
+//								// TODO Auto-generated catch block
+//								e.printStackTrace();
+//							}
+//							json = new JsonThread();
+//							new Thread(json).start();
+//						}
+			}
+		}, itFilter);
+	}
+}
