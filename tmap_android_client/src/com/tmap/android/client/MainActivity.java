@@ -1,5 +1,7 @@
 package com.tmap.android.client;
 
+import com.tmap.library.opengl.Box;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -9,6 +11,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Box box = new Box(1,1,1,1,1,1,1);
         setContentView(R.layout.activity_main);
 
     }

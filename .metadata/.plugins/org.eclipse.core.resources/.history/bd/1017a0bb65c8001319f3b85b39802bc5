@@ -1,0 +1,5 @@
+package com.tmap.model.tool.server;
+
+public class ServerConnector {
+
+}

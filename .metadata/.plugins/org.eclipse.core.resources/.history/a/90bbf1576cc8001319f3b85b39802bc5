@@ -1,0 +1,17 @@
+package com.tmap.model.tool.arch;
+
+import com.tmap.library.datatransfer.HttpUtils;
+
+// Communicate with Server, encapsulated functions to link specific URLs
+public class ServerConnector {
+	private ServerConnector instance = new ServerConnector();
+	private ServerConnector() {}
+	public ServerConnector getInstance() {
+		return instance;
+	}
+	
+	public String uploadWifi(int roomId, float x, float y, float z, String wifiData) {
+		HttpUtils.getInstance().postData(serverURL + "tMap/wifi/wifiJudgePosition", JsonUtils.packObjToJson(ws));
+		return data;
+	}
+}

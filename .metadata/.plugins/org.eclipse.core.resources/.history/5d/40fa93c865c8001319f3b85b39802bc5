@@ -1,0 +1,11 @@
+package com.tmap.model.tool.server;
+
+public class ServerConnector {
+	private ServerConnector instance = new ServerConnector();
+	private ServerConnector() {}
+	public ServerConnector getInstance() {
+		return instance;
+	}
+	
+	public 
+}
