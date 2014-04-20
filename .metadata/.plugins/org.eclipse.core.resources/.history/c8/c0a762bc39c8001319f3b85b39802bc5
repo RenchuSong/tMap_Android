@@ -41,7 +41,7 @@ public class JsonUtils {
 		Gson gson = new Gson();
 		return gson.fromJson(data,  String.class);
 	}
-	public static String[] parseStringList(String data) {
+	public static String[] parseModelList(String data) {
 	 	Gson gson = new Gson();
 		return gson.fromJson(data, String[].class);
 	}
