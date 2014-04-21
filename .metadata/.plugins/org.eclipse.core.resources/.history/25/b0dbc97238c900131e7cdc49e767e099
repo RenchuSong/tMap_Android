@@ -73,7 +73,7 @@ public class WifiCollector extends Activity {
     			@Override
     			public void onClick(View arg0) {
    					// TODO Auto-generated method stub
-    				z.setText(((int)((Float.parseFloat(z.getText().toString()) + 0.2)*100000)) / 100000.0 + "");
+    				z.setText(((int)(Float.parseFloat(z.getText().toString()) + 0.2)*100000)/100000.0 + "");
     			}
            	}
         );
@@ -103,7 +103,7 @@ public class WifiCollector extends Activity {
         		@Override
        			public void onClick(View arg0) {
    					// TODO Auto-generated method stub
-       				z.setText(((int)((Float.parseFloat(z.getText().toString()) - 0.2)*100000)) / 100000.0 + "");
+       				z.setText(((Float.parseFloat(z.getText().toString()) - 0.2)*100000)/100000.0 + "");
       			}
            	}
         );

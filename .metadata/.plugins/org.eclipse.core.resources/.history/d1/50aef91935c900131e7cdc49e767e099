@@ -73,7 +73,7 @@ public class WifiCollector extends Activity {
     			@Override
     			public void onClick(View arg0) {
    					// TODO Auto-generated method stub
-    				z.setText(((int)((Float.parseFloat(z.getText().toString()) + 0.2)*100000)) / 100000.0 + "");
+    				z.setText((Float.parseFloat(z.getText().toString()) + 1) + "");
     			}
            	}
         );
@@ -103,7 +103,7 @@ public class WifiCollector extends Activity {
         		@Override
        			public void onClick(View arg0) {
    					// TODO Auto-generated method stub
-       				z.setText(((int)((Float.parseFloat(z.getText().toString()) - 0.2)*100000)) / 100000.0 + "");
+       				z.setText((Float.parseFloat(z.getText().toString()) - 1) + "");
       			}
            	}
         );
@@ -139,6 +139,9 @@ public class WifiCollector extends Activity {
     	public void handleMessage(android.os.Message msg) {
             switch(msg.what){
             case SystemConfig.MSG_WIFI_COMPLETE:
+//            	for (int i = 0; i < wifiScanner.scanResult.size(); ++i) {
+//            		Log.d("src", wifiScanner.scanResult.get(i).bssid+ " " + wifiScanner.scanResult.get(i).rssi);
+//            	}
             	final int roomId = Integer.parseInt(((EditText)findViewById(R.id.roomId)).getText().toString());
             	final float x = Float.parseFloat(((EditText)findViewById(R.id.x)).getText().toString());
             	final float y = Float.parseFloat(((EditText)findViewById(R.id.y)).getText().toString());
@@ -147,7 +150,7 @@ public class WifiCollector extends Activity {
             	new Thread(new Runnable() {
         			public void run() {
         				try {
-							Log.d("src", ServerConnector.getInstance().uploadWifi(roomId, x, y, z, wifiScanner.scanResult));
+							ServerConnector.getInstance().uploadWifi(roomId, x, y, z, wifiScanner.scanResult);
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							handler.sendEmptyMessage(SystemConfig.MSG_NET_FAIL);
@@ -176,8 +179,7 @@ public class WifiCollector extends Activity {
             	}
             	break;
             case SystemConfig.MSG_NET_FAIL:
-            	Toast.makeText(getApplicationContext(), "网络错误", Toast.LENGTH_SHORT).show();
-            	break;
+            	
             }
             
         };
