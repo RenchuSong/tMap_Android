@@ -1,11 +1,9 @@
 package com.tmap.model.tool;
 
-import java.util.ArrayList;
-
 import com.tmap.library.SystemConfig;
 import com.tmap.library.wifi.BssidRssiPair;
 import com.tmap.library.wifi.WifiScanner;
-import com.tmap.model.tool.arch.ServerConnector;
+import com.tmap.model.tool.arch.TempWifiScanner;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,7 +15,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class WifiCollector extends Activity {
 	public Button upX, upY, upZ, downX, downY, downZ, scan;
@@ -116,12 +113,6 @@ public class WifiCollector extends Activity {
        			public void onClick(View arg0) {
    					// TODO Auto-generated method stub
            			scan.setEnabled(false);
-           			upX.setEnabled(false);
-            		upY.setEnabled(false);
-            		upZ.setEnabled(false);
-            		downX.setEnabled(false);
-            		downY.setEnabled(false);
-            		downZ.setEnabled(false);
            			remaining = Integer.parseInt(((EditText)findViewById(R.id.each_time)).getText().toString());
        				hint.setText("剩余" + remaining + "次");
        				new Thread(new Runnable() {
@@ -134,26 +125,15 @@ public class WifiCollector extends Activity {
            	}
         );
     }
+
     
     Handler handler = new Handler() {
     	public void handleMessage(android.os.Message msg) {
             switch(msg.what){
             case SystemConfig.MSG_WIFI_COMPLETE:
-//            	for (int i = 0; i < wifiScanner.scanResult.size(); ++i) {
-//            		Log.d("src", wifiScanner.scanResult.get(i).bssid+ " " + wifiScanner.scanResult.get(i).rssi);
-//            	}
-            	int roomId = Integer.parseInt(((EditText)findViewById(R.id.roomId)).getText().toString());
-            	float x = Float.parseFloat(((EditText)findViewById(R.id.x)).getText().toString());
-            	float y = Float.parseFloat(((EditText)findViewById(R.id.y)).getText().toString());
-            	float z = Float.parseFloat(((EditText)findViewById(R.id.z)).getText().toString());
-            	
-            	try {
-					ServerConnector.getInstance().uploadWifi(roomId, x, y, z, wifiScanner.scanResult);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					Toast.makeText(getApplicationContext(), "网络错误", Toast.LENGTH_SHORT).show();
-				}
-            	
+            	for (int i = 0; i < wifiScanner.scanResult.size(); ++i) {
+            		Log.d("src", wifiScanner.scanResult.get(i).bssid+ " " + wifiScanner.scanResult.get(i).rssi);
+            	}
             	if (remaining > 1) {
             		--remaining;
             		hint.setText("剩余" + remaining + "次");
@@ -166,12 +146,6 @@ public class WifiCollector extends Activity {
             		// to do
             		hint.setText("就绪");
             		scan.setEnabled(true);
-            		upX.setEnabled(true);
-            		upY.setEnabled(true);
-            		upZ.setEnabled(true);
-            		downX.setEnabled(true);
-            		downY.setEnabled(true);
-            		downZ.setEnabled(true);
             	}
             	break;
             }

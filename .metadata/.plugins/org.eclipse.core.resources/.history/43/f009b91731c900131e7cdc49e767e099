@@ -17,7 +17,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class WifiCollector extends Activity {
 	public Button upX, upY, upZ, downX, downY, downZ, scan;
@@ -151,7 +150,7 @@ public class WifiCollector extends Activity {
 					ServerConnector.getInstance().uploadWifi(roomId, x, y, z, wifiScanner.scanResult);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					Toast.makeText(getApplicationContext(), "网络错误", Toast.LENGTH_SHORT).show();
+					e.printStackTrace();
 				}
             	
             	if (remaining > 1) {

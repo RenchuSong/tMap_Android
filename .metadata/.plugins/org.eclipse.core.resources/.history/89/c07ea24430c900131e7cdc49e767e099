@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import com.tmap.library.SystemConfig;
 import com.tmap.library.wifi.BssidRssiPair;
 import com.tmap.library.wifi.WifiScanner;
-import com.tmap.model.tool.arch.ServerConnector;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,7 +16,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class WifiCollector extends Activity {
 	public Button upX, upY, upZ, downX, downY, downZ, scan;
@@ -147,13 +145,7 @@ public class WifiCollector extends Activity {
             	float y = Float.parseFloat(((EditText)findViewById(R.id.y)).getText().toString());
             	float z = Float.parseFloat(((EditText)findViewById(R.id.z)).getText().toString());
             	
-            	try {
-					ServerConnector.getInstance().uploadWifi(roomId, x, y, z, wifiScanner.scanResult);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					Toast.makeText(getApplicationContext(), "网络错误", Toast.LENGTH_SHORT).show();
-				}
-            	
+            	uploadWifi(roomId, x, y, z, wifiScanner.scanResult)；
             	if (remaining > 1) {
             		--remaining;
             		hint.setText("剩余" + remaining + "次");
