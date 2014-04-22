@@ -51,6 +51,7 @@ public class WifiCollector extends Activity {
 				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
 					double dx = Double.parseDouble(x.getText().toString()) + Double.parseDouble(((EditText)findViewById(R.id.dx)).getText().toString());
+					
 					x.setText((double) (Math.round(dx*100)/100.0) + "");
 				}
         	}
@@ -61,8 +62,8 @@ public class WifiCollector extends Activity {
     			@Override
     			public void onClick(View arg0) {
     				// TODO Auto-generated method stub
-    				double dy = Double.parseDouble(y.getText().toString()) + Double.parseDouble(((EditText)findViewById(R.id.dy)).getText().toString());
-					y.setText((double) (Math.round(dy*100)/100.0) + "");
+    				double dy = Float.parseFloat(((EditText)findViewById(R.id.dy)).getText().toString());
+    				y.setText(((int)((Double.parseDouble(y.getText().toString()) + dy)*10)) / 10.0 + "");
     			}
            	}
         );
@@ -72,8 +73,7 @@ public class WifiCollector extends Activity {
     			@Override
     			public void onClick(View arg0) {
    					// TODO Auto-generated method stub
-    				double dz = Double.parseDouble(z.getText().toString()) + 0.2;
-    				z.setText((double) (Math.round(dz*100)/100.0) + "");
+    				z.setText(((int)((Double.parseDouble(z.getText().toString()) + 0.2)*10)) / 10.0 + "");
     			}
            	}
         );
@@ -83,8 +83,8 @@ public class WifiCollector extends Activity {
             	@Override
     			public void onClick(View arg0) {
     				// TODO Auto-generated method stub
-            		double dx = Double.parseDouble(x.getText().toString()) - Double.parseDouble(((EditText)findViewById(R.id.dx)).getText().toString());
-					x.setText((double) (Math.round(dx*100)/100.0) + "");
+            		double dx = Double.parseDouble(((EditText)findViewById(R.id.dx)).getText().toString());
+					x.setText(((int)((Double.parseDouble(x.getText().toString()) - dx)*10)) / 10.0 + "");
    				}
            	}
         );
@@ -94,8 +94,8 @@ public class WifiCollector extends Activity {
         		@Override
         		public void onClick(View arg0) {
         			// TODO Auto-generated method stub
-        			double dy = Double.parseDouble(y.getText().toString()) - Double.parseDouble(((EditText)findViewById(R.id.dy)).getText().toString());
-					y.setText((double) (Math.round(dy*100)/100.0) + "");
+        			double dy = Double.parseDouble(((EditText)findViewById(R.id.dy)).getText().toString());
+    				y.setText(((int)((Double.parseDouble(y.getText().toString()) - dy)*10)) / 10.0 + "");
        			}
           	}
         );
@@ -105,8 +105,7 @@ public class WifiCollector extends Activity {
         		@Override
        			public void onClick(View arg0) {
    					// TODO Auto-generated method stub
-        			double dz = Double.parseDouble(z.getText().toString()) - 0.2;
-    				z.setText((double) (Math.round(dz*100)/100.0) + "");
+       				z.setText(((int)((Double.parseDouble(z.getText().toString()) - 0.2)*10)) / 10.0 + "");
       			}
            	}
         );

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="480,442" key="UserLibraryLoadSaveDialog.size"/>
-	<item value="/Users/songrenchu/Develop/tMap_Android/tmap_model_tool/lib" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="/Users/songrenchu/Develop/tMap_Android/tmap_model_tool/libs" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="OptionalMessageDialog.hide.">
 		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
 	</section>
@@ -41,7 +41,7 @@
 		</list>
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item value="3" key="pageIndex"/>
+		<item value="2" key="pageIndex"/>
 	</section>
 	<section name="RefactoringWizard.preview">
 		<item value="400" key="height"/>

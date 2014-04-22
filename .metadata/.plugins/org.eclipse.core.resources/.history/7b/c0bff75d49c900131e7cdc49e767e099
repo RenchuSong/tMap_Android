@@ -187,43 +187,4 @@
         android:text="就绪"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_alignTop="@+id/scan"
-        android:textSize="20sp"
-        android:text="X分度" />
-
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/each_time"
-        android:layout_alignTop="@+id/scan"
-        android:text="Y分度"
-        android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/dx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/scan"
-        android:layout_alignBottom="@+id/scan"
-        android:layout_toLeftOf="@+id/scan"
-        android:ems="10"
-        android:text="1.8" />
-
-    <EditText
-        android:id="@+id/dy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/scan"
-        android:layout_alignBottom="@+id/scan"
-        android:layout_alignRight="@+id/TextView01"
-        android:layout_toRightOf="@+id/z"
-        android:ems="10"
-        android:text="1.6"  />
-
 </RelativeLayout>

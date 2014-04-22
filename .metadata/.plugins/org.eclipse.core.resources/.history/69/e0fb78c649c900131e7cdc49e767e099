@@ -205,25 +205,4 @@
         android:text="Y分度"
         android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/dx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/scan"
-        android:layout_alignBottom="@+id/scan"
-        android:layout_toLeftOf="@+id/scan"
-        android:ems="10"
-        android:text="1.8" />
-
-    <EditText
-        android:id="@+id/dy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/scan"
-        android:layout_alignBottom="@+id/scan"
-        android:layout_alignRight="@+id/TextView01"
-        android:layout_toRightOf="@+id/z"
-        android:ems="10"
-        android:text="1.6"  />
-
 </RelativeLayout>

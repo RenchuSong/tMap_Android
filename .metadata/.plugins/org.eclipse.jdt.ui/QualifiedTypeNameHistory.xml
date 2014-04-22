@@ -17,12 +17,15 @@
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.os.Handler"/>
-<fullyQualifiedTypeName name="com.tmap.library.SystemConfig"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
-<fullyQualifiedTypeName name="com.tmap.model.tool.R.id"/>
 <fullyQualifiedTypeName name="com.tmap.library.wifi.BssidRssiPair"/>
 <fullyQualifiedTypeName name="com.tmap.model.tool.arch.TempWifiScanner"/>
 <fullyQualifiedTypeName name="com.tmap.library.wifi.WifiScanner"/>
 <fullyQualifiedTypeName name="com.tmap.library.opengl.Box"/>
+<fullyQualifiedTypeName name="com.tmap.library.datatransfer.JsonUtils"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="com.tmap.model.tool.arch.ServerConnector"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="com.tmap.library.SystemConfig"/>
+<fullyQualifiedTypeName name="com.tmap.model.tool.R.id"/>
 </qualifiedTypeNameHistroy>
