@@ -1,0 +1,7 @@
+package com.tmap.model.tool.arch;
+
+import com.tmap.library.SystemConfig;
+
+public class AppConfig extends SystemConfig{
+
+}

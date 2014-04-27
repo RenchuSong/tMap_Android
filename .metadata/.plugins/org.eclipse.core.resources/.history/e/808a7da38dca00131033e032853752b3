@@ -1,0 +1,5 @@
+package com.tmap.model.tool.arch;
+
+public class AppConfig {
+
+}

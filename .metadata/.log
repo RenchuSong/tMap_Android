@@ -116,3 +116,23 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+!SESSION 2014-04-23 10:16:25.757 -----------------------------------------------
+eclipse.buildId=v22.3.0-887826
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -keyring /Users/songrenchu/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -keyring /Users/songrenchu/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-04-23 10:16:32.677
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2014-04-27 22:24:56.363 -----------------------------------------------
+eclipse.buildId=v22.3.0-887826
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -product com.android.ide.eclipse.adt.package.product -keyring /Users/songrenchu/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -data /Users/songrenchu/Develop/tMap_Android -product com.android.ide.eclipse.adt.package.product -keyring /Users/songrenchu/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-04-27 22:25:00.168
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

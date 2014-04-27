@@ -26,6 +26,9 @@
 <fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="com.tmap.model.tool.arch.ServerConnector"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
-<fullyQualifiedTypeName name="com.tmap.library.SystemConfig"/>
 <fullyQualifiedTypeName name="com.tmap.model.tool.R.id"/>
+<fullyQualifiedTypeName name="com.tmap.library.SystemConfig"/>
+<fullyQualifiedTypeName name="android.media.RingtoneManager"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
+<fullyQualifiedTypeName name="android.media.Ringtone"/>
 </qualifiedTypeNameHistroy>

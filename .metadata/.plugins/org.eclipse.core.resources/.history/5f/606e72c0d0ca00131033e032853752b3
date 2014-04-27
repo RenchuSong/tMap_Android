@@ -1,0 +1,7 @@
+package com.tmap.model.tool.arch;
+
+import com.tmap.library.SystemConfig;
+
+public class AppConfig extends SystemConfig{
+	public static String SERVER_ADDR = "http://175.186.105.232/";	
+}
