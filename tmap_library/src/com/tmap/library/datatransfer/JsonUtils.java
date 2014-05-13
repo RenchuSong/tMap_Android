@@ -6,6 +6,7 @@ import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.tmap.library.server_interface.Location;
 
 public class JsonUtils {
 	private JsonUtils() {}
@@ -41,8 +42,14 @@ public class JsonUtils {
 		Gson gson = new Gson();
 		return gson.fromJson(data,  String.class);
 	}
+	
 	public static String[] parseStringList(String data) {
 	 	Gson gson = new Gson();
 		return gson.fromJson(data, String[].class);
+	}
+	
+	public static Location parseLocation(String data) {
+		Gson gson = new Gson();
+		return gson.fromJson(data, Location.class);
 	}
 }

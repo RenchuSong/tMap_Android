@@ -11,6 +11,7 @@ import android.util.Log;
 import com.tmap.library.SystemConfig;
 import com.tmap.library.datatransfer.HttpUtils;
 import com.tmap.library.datatransfer.JsonUtils;
+import com.tmap.library.server_interface.Location;
 import com.tmap.library.wifi.BssidRssiPair;
 
 // Communicate with Server, encapsulated functions to link specific URLs
@@ -30,5 +31,12 @@ public class ServerConnector {
 		return HttpUtils.getInstance().postData(AppConfig.SERVER_ADDR + url, params);
 	}
 	
-	//
+	// Get Wi-Fi locating result
+	public Location wifiLocating(ArrayList<BssidRssiPair> wifiData) throws Exception {
+		List<NameValuePair> params = new ArrayList<NameValuePair>();
+		String wifiPack = JsonUtils.getInstance().packListToJson(wifiData);
+		params.add(new BasicNameValuePair("wifiData", wifiPack));
+		String url = "tMap/wifi/wifiLocating/";
+		return JsonUtils.parseLocation(HttpUtils.getInstance().postData(AppConfig.SERVER_ADDR + url, params));
+	}
 }

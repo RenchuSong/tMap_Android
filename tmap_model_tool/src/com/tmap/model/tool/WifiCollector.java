@@ -157,6 +157,7 @@ public class WifiCollector extends Activity {
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							handler.sendEmptyMessage(SystemConfig.MSG_NET_FAIL);
+							e.printStackTrace();
 						}
         			}
         		}).start();
