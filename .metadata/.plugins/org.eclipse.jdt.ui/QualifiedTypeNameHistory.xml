@@ -13,9 +13,7 @@
 <fullyQualifiedTypeName name="org.apache.http.NameValuePair"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.apache.http.message.BasicNameValuePair"/>
-<fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.os.Handler"/>
-<fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="com.tmap.library.wifi.BssidRssiPair"/>
 <fullyQualifiedTypeName name="com.tmap.model.tool.arch.TempWifiScanner"/>
 <fullyQualifiedTypeName name="com.tmap.library.wifi.WifiScanner"/>
@@ -29,7 +27,13 @@
 <fullyQualifiedTypeName name="android.net.Uri"/>
 <fullyQualifiedTypeName name="android.media.Ringtone"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
-<fullyQualifiedTypeName name="com.tmap.model.tool.R.id"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="com.tmap.model.tool.server_interface.Location"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="com.tmap.model.tool.R.id"/>
+<fullyQualifiedTypeName name="com.tmap.library.server_interface.Location"/>
+<fullyQualifiedTypeName name="android.content.res.Resources"/>
+<fullyQualifiedTypeName name="android.util.TypedValue"/>
 </qualifiedTypeNameHistroy>
