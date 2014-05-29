@@ -21,6 +21,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +33,7 @@ public class Locating  extends Activity {
 	private TextView building, room, location;
 	
 	private double xLen = 5, yLen = 8;
+	private int width = 180, height = 260;
 	
 	public WifiScanner wifiScanner;
 	
@@ -57,6 +60,7 @@ public class Locating  extends Activity {
         
         start_stop.setOnClickListener(
         	new OnClickListener() {
+
 				@Override
 				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
@@ -72,6 +76,28 @@ public class Locating  extends Activity {
 					}
 					xLen = Double.parseDouble(xRange.getText().toString());
 					yLen = Double.parseDouble(yRange.getText().toString());
+					width = (int) (1000 * xLen);
+					height = (int) (1000 * yLen);
+					
+					if (height > 300) {
+						width = width * 300 / height;
+						height = 300;
+					}
+					
+					if (width > 200) {
+						height = height * 200 / width;
+						width = 200;
+					}
+					Log.v("src", width +" " + height);
+//					RelativeLayout.LayoutParams timeParams = new RelativeLayout.LayoutParams(width,height);
+//					timeParams.leftMargin=10;	     
+//					timeParams.topMargin=10;
+					((RelativeLayout)findViewById(R.id.mock_room)).getLayoutParams().height = height;
+					((RelativeLayout)findViewById(R.id.mock_room)).getLayoutParams().width = width;
+					
+					//.setLayoutParams(new RelativeLayout.LayoutParams(timeParams));
+					
+					//.setLayoutParams(new RelativeLayout.LayoutParams(width, height));
 					new Thread(new Runnable() {
        					public void run() {
        						wifiScanner.scan();
@@ -122,8 +148,8 @@ public class Locating  extends Activity {
             	building.setText("Building: " + locating.buildingId);
             	room.setText("Room: " + locating.roomId);
             	location.setText("X: " + locating.x + "   Y: " + locating.y + "    Z: " + locating.z);
-            	person.setX(getPixels((int)(locating.x * 180 / xLen)));
-                person.setY(getPixels((int)(locating.y * 260 / yLen)));
+            	person.setX(getPixels((int)(locating.x * width / xLen)));
+                person.setY(getPixels(height - (int)(locating.y * height / yLen)));
                 
             	if (isLocating) {
             		new Thread(new Runnable() {
