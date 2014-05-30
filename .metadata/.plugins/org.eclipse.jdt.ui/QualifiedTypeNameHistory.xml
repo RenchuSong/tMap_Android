@@ -32,8 +32,9 @@
 <fullyQualifiedTypeName name="com.tmap.model.tool.server_interface.Location"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
-<fullyQualifiedTypeName name="com.tmap.model.tool.R.id"/>
 <fullyQualifiedTypeName name="com.tmap.library.server_interface.Location"/>
 <fullyQualifiedTypeName name="android.content.res.Resources"/>
 <fullyQualifiedTypeName name="android.util.TypedValue"/>
+<fullyQualifiedTypeName name="com.tmap.model.tool.R.id"/>
+<fullyQualifiedTypeName name="android.widget.RelativeLayout"/>
 </qualifiedTypeNameHistroy>
